@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import evaluator.exception.DuplicateIntrebareException;
+import evaluator.exception.InputValidationFailedException;
 import evaluator.model.Intrebare;
 import evaluator.model.Statistica;
 import evaluator.model.Test;
+import evaluator.repository.InMemoryRepository;
 import evaluator.repository.IntrebariRepositoryFile;
 import evaluator.exception.NotAbleToCreateStatisticsException;
 import evaluator.exception.NotAbleToCreateTestException;
@@ -20,9 +22,13 @@ public class IntrebariController {
         intrebariRepository = new IntrebariRepositoryFile(new IntrebareValidation(), "src/main/resources/intrebari.txt");
     }
 
-    public Intrebare addNewIntrebare(Intrebare intrebare) throws DuplicateIntrebareException {
+    public Intrebare addNewIntrebare(Intrebare intrebare) throws InputValidationFailedException {
 
-        intrebariRepository.add(intrebare);
+        try {
+            intrebariRepository.add(intrebare);
+        } catch (DuplicateIntrebareException e) {
+            e.printStackTrace();
+        }
 
         return intrebare;
     }

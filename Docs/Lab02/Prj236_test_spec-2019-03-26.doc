@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec Prj236 - rmir2179_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj236<br>Test Suite: Prj236 - rmir2179_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 26/03/2019</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>
+	Testing project for group 236.</p></div>
+ <br/><h1 class='doclevel'>Test Suite : rmir2179_BBT</h1>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj236-42: ECP_Valid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><h4 style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+	addNewIntrebare(&quot;Ce faci?&quot;,&quot;1)Bine&quot;, &quot;2)Foarte bine&quot;,&quot;3)Bine,tu?&quot;,3,&quot;Domeniu&quot;)</h4>
+<p>
+	Expected Ouput : &quot;Intrebarea a fost adaugata cu succes!&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj236-43: ECP_Invalid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+addNewIntrebare(<b>&quot;Cat e 2+5 = ?&quot;,&quot;1)2&quot;,&quot;2)0&quot;,&quot;3)7&quot;,&quot;abc&quot;,&quot;Matematica&quot;</b>)</pre>
+<p>
+	Expected output :&nbsp;<span style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">InputValidationFailedException(</span><span style="background-color: rgb(255, 255, 255); color: rgb(0, 128, 0); font-family: &quot;Courier New&quot;; font-size: 9pt; font-weight: bold;">Varianta corecta nu este unul dintre caracterele {&#39;1&#39;, &#39;2&#39;, &#39;3&#39;})</span></p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj236-44: BVA_Valid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+addNewIntrebare(&quot;Ce mai faci?&quot;, &quot;1)Bine&quot;, &quot;2)Dar tu?&quot;, &quot;3)Bine,dar tu?&quot;,1,&quot;Matematica&quot;);</pre>
+<p>
+	Output expected : &quot;Intrebarea a fost adaugata cu succes!&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj236-45: BVA_Invalid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+addNewIntrebare(&quot;Alo?&quot;,&quot;1)Alo!Da?&quot;,&quot;2)Alo!Nu!&quot;,&quot;3)Olaa&quot;,1,&quot;aaaabbbbcderijlordsjhdsedklolm&quot;);
+
+</pre>
+<p>
+	Expected Ouput :&nbsp;<span style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">InputValidationFailedException(</span><span style="font-family: &quot;Courier New&quot;; font-size: 9pt; color: rgb(0, 128, 0); font-weight: bold;">&quot;Lungimea domeniului depaseste 30 de caractere!&quot;</span><span style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">);</span></p>
+<pre style="background-color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+
+</pre>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+
+</body>
+</html>

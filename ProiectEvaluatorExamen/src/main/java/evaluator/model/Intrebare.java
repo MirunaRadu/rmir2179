@@ -15,7 +15,7 @@ public class Intrebare {
     }
 
     public Intrebare(String enunt, String varianta1, String varianta2, String varianta3,
-                     Integer variantaCorecta, String domeniu) throws InputValidationFailedException {
+                     Integer variantaCorecta, String domeniu) {
         this.enunt = enunt;
         this.varianta1 = varianta1;
         this.varianta2 = varianta2;

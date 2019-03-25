@@ -1,6 +1,7 @@
 package evaluator.repository;
 
 import evaluator.exception.DuplicateIntrebareException;
+import evaluator.exception.InputValidationFailedException;
 import evaluator.model.Intrebare;
 import evaluator.validator.IValidator;
 
@@ -18,11 +19,15 @@ public class IntrebariRepositoryFile extends InMemoryRepository<Intrebare> {
     }
 
     @Override
-    public Intrebare add(Intrebare entity) throws DuplicateIntrebareException {
+    public Intrebare add(Intrebare entity) throws DuplicateIntrebareException, InputValidationFailedException {
         try {
             super.add(entity);
         } catch (Exception e) {
-            throw new DuplicateIntrebareException("Exista deja aceasta intrebare!");
+            if (e instanceof InputValidationFailedException) {
+                throw (InputValidationFailedException) e;
+            } else if (e instanceof DuplicateIntrebareException) {
+                throw new DuplicateIntrebareException("Exista deja aceasta intrebare!");
+            }
         }
         writeToFile(entity);
         return entity;
