@@ -1,25 +1,27 @@
 package evaluator.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import evaluator.exception.DuplicateIntrebareException;
 import evaluator.exception.InputValidationFailedException;
+import evaluator.exception.NotAbleToCreateStatisticsException;
+import evaluator.exception.NotAbleToCreateTestException;
 import evaluator.model.Intrebare;
 import evaluator.model.Statistica;
 import evaluator.model.Test;
-import evaluator.repository.InMemoryRepository;
+import evaluator.repository.IRepository;
 import evaluator.repository.IntrebariRepositoryFile;
-import evaluator.exception.NotAbleToCreateStatisticsException;
-import evaluator.exception.NotAbleToCreateTestException;
+import evaluator.repository.MockRepository;
 import evaluator.validator.IntrebareValidation;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class IntrebariController {
 
-    private IntrebariRepositoryFile intrebariRepository;
+    private MockRepository intrebariRepository;
 
-    public IntrebariController() {
-        intrebariRepository = new IntrebariRepositoryFile(new IntrebareValidation(), "src/main/resources/intrebari.txt");
+    public IntrebariController(MockRepository repo) {
+        this.intrebariRepository = repo;
+        //intrebariRepository = new IntrebariRepositoryFile(new IntrebareValidation(), "src/main/resources/intrebari.txt");
     }
 
     public Intrebare addNewIntrebare(Intrebare intrebare) throws InputValidationFailedException {
@@ -27,6 +29,8 @@ public class IntrebariController {
         try {
             intrebariRepository.add(intrebare);
         } catch (DuplicateIntrebareException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -49,15 +53,36 @@ public class IntrebariController {
         while (testIntrebari.size() != 5) {
             intrebare = intrebariRepository.pickRandomIntrebare();
 
-            if (!testIntrebari.contains(intrebare) && !domenii.contains(intrebare.getDomeniu())) {
-                testIntrebari.add(intrebare);
-                domenii.add(intrebare.getDomeniu());
+            if (!testIntrebari.contains(intrebare)) {
+                if (!domenii.contains(intrebare.getDomeniu())) {
+                    testIntrebari.add(intrebare);
+                    domenii.add(intrebare.getDomeniu());
+                }
             }
 
         }
-
         test.setIntrebari(testIntrebari);
         return test;
+
+    }
+    public void addIntrebari() {
+        try {
+            this.addNewIntrebare(new Intrebare("Ct e 2+2?", "1)4", "2)5", "3)5", 2, "Matematica"));
+            this.addNewIntrebare(new Intrebare("ttt e 3+2?", "1)5", "2)5", "3)5", 1, "Matematica"));
+        } catch (InputValidationFailedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addIntrebariOk() {
+        try {
+            this.addNewIntrebare(new Intrebare("ttteew e 3+2?", "1)5", "2)5", "3)5", 1, "Alt alt domeniu"));
+            this.addNewIntrebare(new Intrebare("DSFSttt e 3+2?", "1)5", "2)5", "3)5", 1, "Alt alt domeniu2"));
+            this.addNewIntrebare(new Intrebare("Ct e 2+2e?", "1)4", "2)5", "3)5", 2, "Alt domeniu"));
+        } catch (InputValidationFailedException e) {
+            e.printStackTrace();
+        }
+
 
     }
 

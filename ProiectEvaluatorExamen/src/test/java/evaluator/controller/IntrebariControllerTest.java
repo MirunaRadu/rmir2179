@@ -17,7 +17,7 @@ public class IntrebariControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        intrebariController = new IntrebariController();
+       // intrebariController = new IntrebariController();
     }
 
     @After

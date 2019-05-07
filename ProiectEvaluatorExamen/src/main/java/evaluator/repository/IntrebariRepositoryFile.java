@@ -11,22 +11,26 @@ import java.util.function.Consumer;
 
 public class IntrebariRepositoryFile extends InMemoryRepository<Intrebare> {
     private String fName;
+    protected IValidator<Intrebare> vali;
 
     public IntrebariRepositoryFile(IValidator<Intrebare> v, String fName) {
-        super(v);
         this.fName = fName;
+        this.vali = v;
         loadIntrebariFromFile();
     }
 
     @Override
     public Intrebare add(Intrebare entity) throws DuplicateIntrebareException, InputValidationFailedException {
         try {
+            vali.validate(entity);
             super.add(entity);
         } catch (Exception e) {
             if (e instanceof InputValidationFailedException) {
                 throw (InputValidationFailedException) e;
             } else if (e instanceof DuplicateIntrebareException) {
                 throw new DuplicateIntrebareException("Exista deja aceasta intrebare!");
+            } else {
+                System.out.println(e);
             }
         }
         writeToFile(entity);

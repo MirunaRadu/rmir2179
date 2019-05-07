@@ -16,6 +16,7 @@ public class Test {
         return intrebari;
     }
 
+
     public void setIntrebari(List<Intrebare> intrebari) {
         this.intrebari = intrebari;
     }

@@ -10,6 +10,7 @@ import evaluator.model.Statistica;
 
 import evaluator.controller.IntrebariController;
 import evaluator.exception.NotAbleToCreateStatisticsException;
+import evaluator.repository.MockRepository;
 
 //functionalitati
 //F01.	 adaugarea unei noi intrebari pentru un anumit domeniu (enunt intrebare, raspuns 1, raspuns 2, raspuns 3, raspunsul corect, domeniul) in setul de intrebari disponibile;
@@ -22,7 +23,7 @@ public class StartApp {
 
         BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
-        IntrebariController intrebariController = new IntrebariController();
+       IntrebariController intrebariController = new IntrebariController(new MockRepository());
 
         boolean activ = true;
         String optiune = null;
@@ -60,7 +61,7 @@ public class StartApp {
                     break;
                 case "2":
                     try {
-                        System.out.println(intrebariController.createNewTest().toString());
+                        intrebariController.createNewTest();
                     } catch (NotAbleToCreateTestException e) {
                         System.out.println(e.getMessage());
                     }
