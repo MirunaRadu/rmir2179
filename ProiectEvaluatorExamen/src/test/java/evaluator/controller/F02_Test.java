@@ -26,8 +26,7 @@ public class F02_Test {
         } catch (NotAbleToCreateTestException e) {
             didThrow = true;
         } finally {
-            assert didThrow;
-        }
+            assert didThrow; }
     }
 
     @Test

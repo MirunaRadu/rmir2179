@@ -3,6 +3,7 @@ package evaluator.controller;
 import evaluator.exception.DuplicateIntrebareException;
 import evaluator.exception.InputValidationFailedException;
 import evaluator.model.Intrebare;
+import evaluator.repository.MockRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -11,13 +12,13 @@ import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
-public class IntrebariControllerTest {
+public class F01_Test {
 
     private IntrebariController intrebariController;
 
     @Before
     public void setUp() throws Exception {
-       // intrebariController = new IntrebariController();
+        intrebariController = new IntrebariController(new MockRepository());
     }
 
     @After
@@ -32,6 +33,7 @@ public class IntrebariControllerTest {
         );
         try {
             intrebariController.addNewIntrebare(intr);
+            assertEquals(intrebariController.getIntrebariRepository().getIntrebari().size(), 5);
         } catch (InputValidationFailedException e) {
             fail();
         }
@@ -40,13 +42,13 @@ public class IntrebariControllerTest {
     @Test()
     public void addIntrebareECP3() {
         Intrebare intr = new Intrebare(
-                "Buna seara?", "1)Buna", "2)Buna", "3)Buna", 1, "cevadomeniu"
+                "Buna seara?", ")Buna", "2)Buna", "3)Buna", 1, "cevadomeniu"
         );
         try {
             intrebariController.addNewIntrebare(intr);
-            fail();
         } catch (InputValidationFailedException expected) {
-            assertEquals("Prima litera din domeniu nu e majuscula!", expected.getMessage());
+            assertEquals(intrebariController.getIntrebariRepository().getIntrebari().size(), 4);
+            // assertEquals("Prima litera din domeniu nu e majuscula!", expected.getMessage());
         }
     }
 
@@ -57,7 +59,6 @@ public class IntrebariControllerTest {
         );
         try {
             intrebariController.addNewIntrebare(intr);
-            fail();
         } catch (InputValidationFailedException expected) {
             assertEquals("Varianta corecta nu este unul dintre caracterele {'1', '2', '3'}", expected.getMessage());
         }
@@ -70,7 +71,6 @@ public class IntrebariControllerTest {
         );
         try {
             intrebariController.addNewIntrebare(intr);
-            fail();
         } catch (InputValidationFailedException expected) {
             assertEquals("Domeniul este vid!", expected.getMessage());
         }
@@ -83,6 +83,7 @@ public class IntrebariControllerTest {
         );
         try {
             intrebariController.addNewIntrebare(intr);
+            assertEquals(intrebariController.getIntrebariRepository().getIntrebari().size(), 5);
         } catch (InputValidationFailedException expected) {
             fail();
         }

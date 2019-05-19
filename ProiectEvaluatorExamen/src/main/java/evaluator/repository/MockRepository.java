@@ -10,9 +10,9 @@ public class MockRepository extends InMemoryRepository<Intrebare> {
 
     public MockRepository() {
         entities.add(new Intrebare("Blabla", "1)Bla", "2)Blabla", "3)Blablabla", 1, "Random"));
-        entities.add(new Intrebare("Hei", "1)hei", "2)hei", "3)heihei", 2, "Random"));
+        entities.add(new Intrebare("Hei", "1)hei", "2)hei", "3)heihei", 2, "Random1"));
         entities.add(new Intrebare("Cat e 1+1?", "1)1", "2)2", "3)3", 3, "Matematica"));
-        entities.add(new Intrebare("Cat e 2+1?", "1)1", "2)2", "3)3", 3, "Matematica"));
+        entities.add(new Intrebare("Cat e 2+1?", "1)1", "2)2", "3)3", 3, "Matematica1"));
         //list.add(new Intrebare("Cat e 3+1?", "1)1", "2)2", "3)4", 3, "Matematica"));
     }
 
@@ -39,11 +39,7 @@ public class MockRepository extends InMemoryRepository<Intrebare> {
     }
 
     public List<Intrebare> getIntrebari() {
-        List<Intrebare> s = new ArrayList<>();
-        Iterable<Intrebare> list = getAll();
-        for (Intrebare t : list)
-            s.add(t);
-        return s;
+        return entities;
     }
 
 

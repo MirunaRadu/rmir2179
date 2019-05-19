@@ -7,10 +7,7 @@ import evaluator.exception.NotAbleToCreateTestException;
 import evaluator.model.Intrebare;
 import evaluator.model.Statistica;
 import evaluator.model.Test;
-import evaluator.repository.IRepository;
-import evaluator.repository.IntrebariRepositoryFile;
 import evaluator.repository.MockRepository;
-import evaluator.validator.IntrebareValidation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +32,10 @@ public class IntrebariController {
         }
 
         return intrebare;
+    }
+
+    public MockRepository getIntrebariRepository() {
+        return intrebariRepository;
     }
 
     public Test createNewTest() throws NotAbleToCreateTestException {
