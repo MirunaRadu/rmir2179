@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db46a182-42f1-4039-aa1c-3392a410aaa5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/F03_Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Docs/Lab03/Lab03_WBT_TCs_FormRaduMiruna.xls" beforeDir="false" afterPath="$PROJECT_DIR$/../Docs/Lab03/Lab03_WBT_TCs_FormRaduMiruna.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/evaluator/controller/IntrebariController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/evaluator/controller/IntrebariController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/evaluator/repository/MockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/evaluator/repository/MockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/evaluator/controller/F02_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/F02_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/evaluator/controller/IntrebariControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/F01_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/evaluator/controller/IntrebariController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/evaluator/controller/IntrebariController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/evaluator/repository/MockRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/evaluator/repository/MockRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/evaluator/controller/F02_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/evaluator/controller/F02_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/evaluator/controller/IntrebariControllerTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="db46a182-42f1-4039-aa1c-3392a410aaa5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/F01_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="92" column="32" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="32" />
+            <state relative-caret-position="85">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/F02_Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
@@ -379,7 +365,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558266781520" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558267894187" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -587,7 +573,7 @@
       <workItem from="1555429038436" duration="897000" />
       <workItem from="1555785943209" duration="1304000" />
       <workItem from="1557185978125" duration="8470000" />
-      <workItem from="1558262621465" duration="3538000" />
+      <workItem from="1558262621465" duration="4154000" />
     </task>
     <servers />
   </component>
@@ -624,7 +610,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65721000" />
+    <option name="totallyTimeSpent" value="66337000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1285,20 +1271,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/F01_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/F02_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="32" />
+        <state relative-caret-position="364">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/F02_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/F01_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="23" />
+        <state relative-caret-position="85">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
